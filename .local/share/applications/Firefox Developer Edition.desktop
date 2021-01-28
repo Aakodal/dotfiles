@@ -1,1 +1,14 @@
-/home/aakodal/.local/share/applications/Firefox Developer Edition.desktop
+[Desktop Entry]
+Name=Firefox Developer Edition
+Exec=/opt/firefox-dev/firefox %u
+Comment=Définition personnalisée pour Firefox Developer Edition
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Icon=/home/aakodal/.local/share/icons/firefox-dev.png
+Terminal=false
+StartupWMClass=Firefox Developer Edition
+Categories=GNOME;GTK;Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;
+Name[fr_FR]=Firefox Developer Edition
+StartupNotify=false

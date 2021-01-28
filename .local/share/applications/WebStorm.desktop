@@ -1,1 +1,9 @@
-/home/aakodal/.local/share/applications/WebStorm.desktop
+[Desktop Entry]
+Name=WebStorm
+Exec="/snap/bin/webstorm" %f
+Comment=The smartest JavaScript IDE
+Terminal=false
+Icon=/home/aakodal/.local/share/icons/webstorm.png
+Type=Application
+Categories=Development;IDE;
+StartupWMClass=jetbrains-webstorm

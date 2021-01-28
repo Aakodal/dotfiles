@@ -1,1 +1,8 @@
-/home/aakodal/.local/share/applications/KeePass2.desktop
+[Desktop Entry]
+Name=KeePass2
+Exec=mono "/home/aakodal/keepass2/KeePass.exe"
+Comment=KeePass2 Password manager
+Terminal=false
+Icon=/home/aakodal/.local/share/icons/keepass.png
+Type=Application
+Categories=Utility;

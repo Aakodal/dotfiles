@@ -1,1 +1,9 @@
-/home/aakodal/.local/share/applications/phpstorm.desktop
+[Desktop Entry]
+Name=PhpStorm
+Exec="/snap/bin/phpstorm" %f
+Comment=Lightning-smart PHP IDE
+Terminal=false
+Icon=/home/aakodal/.local/share/icons/phpstorm.png
+Type=Application
+Categories=Development;IDE;
+StartupWMClass=jetbrains-phpstorm

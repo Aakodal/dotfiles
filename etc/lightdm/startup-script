@@ -1,1 +1,9 @@
-/etc/lightdm/startup-script
+#! /bin/bash
+
+if type redshift; then
+	redshift &
+fi
+
+if type brightnessctl; then
+	brightnessctl set 65% &
+fi

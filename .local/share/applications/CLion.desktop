@@ -1,1 +1,10 @@
-/home/aakodal/.local/share/applications/CLion.desktop
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=CLion
+Exec="/snap/bin/clion" %f
+Comment=A cross-platform IDE for C and C++
+Terminal=false
+Icon=/home/aakodal/.local/share/icons/clion.png
+Type=Application
+Categories=Development;IDE;
+StartupWMClass=jetbrains-clion

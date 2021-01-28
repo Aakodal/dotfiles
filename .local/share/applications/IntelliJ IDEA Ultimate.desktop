@@ -1,1 +1,9 @@
-/home/aakodal/.local/share/applications/IntelliJ IDEA Ultimate.desktop
+[Desktop Entry]
+Name=IntelliJ IDEA Ultimate Edition
+Exec="/snap/bin/intellij-idea-ultimate" %f
+Comment=Capable and Ergonomic IDE for JVM
+Terminal=false
+Icon=/home/aakodal/.local/share/icons/idea.png
+Type=Application
+Categories=Development;IDE;
+StartupWMClass=jetbrains-idea

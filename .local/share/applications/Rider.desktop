@@ -1,1 +1,9 @@
-/home/aakodal/.local/share/applications/Rider.desktop
+[Desktop Entry]
+Name=Rider
+Exec="/snap/bin/rider" %f
+Comment=A cross-platform IDE for .NET
+Terminal=false
+Icon=/home/aakodal/.local/share/icons/rider.png
+Type=Application
+Categories=Development;IDE;
+StartupWMClass=jetbrains-rider
