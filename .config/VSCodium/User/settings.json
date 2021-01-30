@@ -16,6 +16,8 @@
     "editor.smoothScrolling": true,
     "editor.fontLigatures": true,
     "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "gitlens.advanced.telemetry.enabled": false,
     "eslint.alwaysShowStatus": true,
     "eslint.format.enable": true,
     "materialTheme.accent": "Teal",
