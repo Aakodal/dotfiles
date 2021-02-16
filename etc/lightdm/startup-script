@@ -7,3 +7,5 @@ fi
 if type brightnessctl; then
 	brightnessctl set 65% &
 fi
+
+setxkbmap -option compose:menu
