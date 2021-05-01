@@ -202,9 +202,9 @@ window:
 colors:
   primary:
     background: '0x2E3440'
-    foreground: '0xD8DEE9'
+    foreground: '0xECEFF4'
   cursor:
-    text: '0x2E3440'
+    text: '0xD8DEE9'
     cursor: '0xD8DEE9'
   normal:
     black: '0x3B4252'

@@ -34,19 +34,26 @@ in
 
     packages = with pkgs; [
       # Utilities
-      wget curl zip unzip screenfetch feh bat brightnessctl gnupg neofetch findutils
+      wget curl zip unzip screenfetch feh bat brightnessctl gnupg neofetch findutils pulseaudio-ctl intltool
+
+      # Image
+      gimp
+
+      # DE utils
+      unstable.gnome3.file-roller unstable.cinnamon.xviewer vlc
 
       # Fonts
-      powerline-fonts roboto source-code-pro dejavu_fonts noto-fonts-emoji jetbrains-mono ubuntu_font_family lato
+      powerline-fonts roboto source-code-pro noto-fonts-emoji dejavu_fonts jetbrains-mono ubuntu_font_family lato twitter-color-emoji
 
       # Terminal & shell
       alacritty zsh
 
       # Editors
-      unstable.vscodium
+      unstable.vscodium unstable.jetbrains.idea-ultimate unstable.jetbrains.webstorm
+      # unstable.jetbrains.clion
 
       # Dev
-      unstable.nodejs-16_x
+      unstable.nodejs-16_x unstable.python39 adoptopenjdk-bin
 
       # Browser
       firefox ungoogled-chromium

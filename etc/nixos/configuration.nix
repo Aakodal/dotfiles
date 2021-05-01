@@ -9,7 +9,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "aakodal";
+  networking.hostName = "nebula";
 
   time.timeZone = "Europe/Paris";
 
@@ -45,6 +45,11 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts.emoji = [ "Noto Color Emoji" "Twitter Color Emoji" ];
+  };
+
   users.users.aakodal = {
     isNormalUser = true;
     description = "Aakodal";
@@ -75,7 +80,6 @@
     ohMyZsh = {
       enable = true;
       theme = "agnoster";
-      plugins = [ "git" ];
     };
   };
 
