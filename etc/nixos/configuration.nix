@@ -27,20 +27,35 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  services.xserver = {
-    enable = true;
-    libinput.enable = true;
-
-    videoDrivers = [ "nvidia" ];
-
-    layout = "fr";
-    xkbOptions = "eurosign:e";
-
-    displayManager.lightdm.enable = true;
-    desktopManager.cinnamon.enable = true;
+  location = {
+    latitude = 48.1;
+    longitude = 11.6;
   };
 
-  services.printing.enable = true;
+  services = {
+    printing.enable = true;
+
+    xserver = {
+      enable = true;
+      libinput.enable = true;
+
+      videoDrivers = [ "nvidia" ];
+
+      layout = "fr";
+      xkbOptions = "eurosign:e";
+
+      displayManager.lightdm.enable = true;
+      desktopManager.cinnamon.enable = true;
+    };
+
+    redshift = {
+      enable = true;
+      temperature = {
+        day = 4600;
+        night = 4600;
+      };
+    };
+  };
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;

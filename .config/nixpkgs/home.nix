@@ -34,16 +34,16 @@ in
 
     packages = with pkgs; [
       # Utilities
-      wget curl zip unzip screenfetch feh bat brightnessctl gnupg neofetch findutils pulseaudio-ctl intltool
+      wget curl zip unzip screenfetch feh bat brightnessctl gnupg neofetch findutils pulseaudio-ctl
 
       # Image
-      gimp
+      gimp unstable.flameshot
 
       # DE utils
       unstable.gnome3.file-roller unstable.cinnamon.xviewer vlc
 
       # Fonts
-      powerline-fonts roboto source-code-pro noto-fonts-emoji dejavu_fonts jetbrains-mono ubuntu_font_family lato twitter-color-emoji
+      powerline-fonts roboto source-code-pro unstable.noto-fonts-emoji dejavu_fonts jetbrains-mono ubuntu_font_family lato twitter-color-emoji
 
       # Terminal & shell
       alacritty zsh
@@ -60,20 +60,13 @@ in
 
       # Chat
       discord-canary hexchat
+
+      # Game
+      steam
     ];
   };
 
   services = {
-    redshift = {
-      enable = true;
-      temperature = {
-        day = 4600;
-        night = 4600;
-      };
-      latitude = "48.1";
-      longitude = "11.6";
-    };
-
     gpg-agent = {
       enable = true;
     };
