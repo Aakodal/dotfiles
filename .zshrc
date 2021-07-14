@@ -73,7 +73,6 @@ ZSH_THEME="agnoster"
 plugins=(
   git
   zsh-syntax-highlighting
-  tmux
   zsh-autosuggestions
 )
 
@@ -138,12 +137,14 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 export SHELL=zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-# Created by `userpath` on 2020-11-06 21:02:00
-export PATH="$PATH:/home/aakodal/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/share/Flutter-2.2.3/bin"
+export PATH="$PATH:$HOME/.volta/.bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 export WINEPREFIX="/home/aakodal/.local/share/wineprefixes/w32"
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 alias gitacp='git add -A && git commit && git push'
+alias zcc='gcc -Wall -Wextra -pedantic -std=c11 -fno-common -fno-builtin'
