@@ -21,6 +21,8 @@ window:
     columns: 95
     lines: 25
 
+  opacity: 0.85
+
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
@@ -199,6 +201,8 @@ font:
 #    cyan:    '#35434d'
 #    white:   '#ffffff'
 
+
+# Colors (Nord)
 colors:
   primary:
     background: '0x2E3440'
@@ -216,14 +220,50 @@ colors:
     cyan: '0x88C0D0'
     white: '0xE5E9F0'
   bright:
-    black: '0x4C566A'
-    red: '0xBF616A'
-    green: '0xA3BE8C'
-    yellow: '0xEBCB8B'
-    blue: '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan: '0x8FBCBB'
+    black: '0xb5bcc9'
+    red: '0xdaa4aa'
+    green: '0xbed1ad'
+    yellow: '0xedce92'
+    blue: '0xabbdd4'
+    magenta: '0xccb3c7'
+    cyan: '0xa4cfdb'
     white: '0xECEFF4'
+
+
+# colors:
+#   primary:
+#     background: '0xeff1f6'
+#     foreground: '0x2e3440'
+#   cursor:
+#     text: '0xD8DEE9'
+#     cursor: '0x2E3440'
+#   normal:
+#     black: '0x3b4252'
+#     red: '0xBF616A'
+#     green: '0xA3BE8C'
+#     yellow: '0xEBCB8B'
+#     blue: '0x5e81ac'
+#     magenta: '0xB48EAD'
+#     cyan: '0x88C0D0'
+#     white: '0xE5E9F0'
+#   # bright:
+#   #   black: '0xb5bcc9'
+#   #   red: '0xc46e77'
+#   #   green: '0xb1c89d'
+#   #   yellow: '0xedce92'
+#   #   blue: '0x81A1C1'
+#   #   magenta: '0xb894b1'
+#   #   cyan: '0x92c5d3'
+#   #   white: '0xECEFF4'
+#   bright:
+#     black: '0xb5bcc9'
+#     red: '0xdaa4aa'
+#     green: '0xbed1ad'
+#     yellow: '0xedce92'
+#     blue: '0xabbdd4'
+#     magenta: '0xccb3c7'
+#     cyan: '0xa4cfdb'
+#     white: '0xECEFF4'
 
 
 # Colors (Tomorrow Night Bright)
@@ -342,7 +382,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-#background_opacity: 1.0
+#background_opacity: 0.65
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>	"

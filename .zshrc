@@ -34,6 +34,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/share/Flutter-2.2.3/bin"
 export PATH="$PATH:$HOME/.volta/.bin"
 export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/share/haxe-4.1.5"
 
 export WINEPREFIX="/home/aakodal/.local/share/wineprefixes/w32"
 
@@ -44,3 +45,5 @@ alias zcc='gcc -Wall -Wextra -pedantic -std=c11 -fno-common -fno-builtin'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source /home/aakodal/.config/broot/launcher/bash/br
