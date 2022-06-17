@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=XSession
-Exec=/usr/local/bin/plasma-i3
+Exec=/usr/local/sbin/plasma-i3
+TryExec=/usr/local/sbin/plasma-i3
 DesktopNames=KDE
 Name=Plasma (X11) w/ i3
 Name[ar]=بلازما (اكس١١) w/ i3
