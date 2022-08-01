@@ -169,6 +169,19 @@ bindcode $mod+Shift+90 	 move container to workspace  $ws10
 
 #bindsym $mod+r mode "resize"
 
+# Resizing by 1
+bindsym $mod+Ctrl+Right resize shrink width 1 px or 1 ppt
+bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
+bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
+bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
+
+# Resizing by 10
+bindsym $mod+Ctrl+Shift+Right resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+Up resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+Down resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+Left resize grow width 10 px or 10 ppt
+
+
 ######################################
 # keybindings for different actions: #
 ######################################
@@ -296,12 +309,12 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:"
+set $ws1 "1:"
 set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
-set $ws6 "6"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -317,10 +330,12 @@ set $ws10 "10"
 #workspace $ws5 output HDMI-0
 
 # bind program to workspace and focus to them on startup:
-assign [class="Xfce4-terminal"] $ws1
+assign [class="(?i)Discord"] $ws1
 assign [class="(?i)firefox"] $ws2
-assign [class="Thunderbird"] $ws4
-assign [class="TelegramDesktop"] $ws5
+assign [class="(?i)VScodium"] $ws3
+assign [class="jetbrains-webstorm"] $ws3
+assign [class="Thunderbird"] $ws5
+assign [class="TelegramDesktop"] $ws6
 
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=Xfce4-terminal] focus
@@ -414,6 +429,7 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 #exec --no-startup-id sleep 2 && xfce4-terminal
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
+exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/alacritty -e /home/aakodal/sysupdate.sh'
 
 ###############
 # system tray #
