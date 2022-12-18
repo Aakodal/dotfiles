@@ -18,13 +18,13 @@ uptime="`uptime -p | sed -e 's/up //g'`"
 host=`hostname`
 
 # Options
-shutdown=''
-reboot=''
-lock=''
-suspend=''
-logout=''
-yes=''
-no=''
+shutdown=''
+reboot=''
+lock=''
+suspend=''
+logout=''
+yes=''
+no=''
 
 # Rofi CMD
 rofi_cmd() {
@@ -70,14 +70,16 @@ run_cmd() {
 			amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
-			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
-				openbox --exit
-			elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
-				bspc quit
-			elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
-				i3-msg exit
-			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
-				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+			if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
+				hyprctl dispatch -- exit
+			else
+				qdbus org.kde.ksmserver /KSMServer logout 0 3 3 && i3-msg exit
+			fi
+		elif [[ $1 == '--lock' ]]; then
+			if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
+				swaylock -e -i "$HOME/Documents/lockscreen.png"
+			else
+				betterlockscreen -l blur
 			fi
 		fi
 	else
@@ -95,7 +97,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		betterlockscreen -l blur
+		run_cmd --lock
         ;;
     $suspend)
 		run_cmd --suspend

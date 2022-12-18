@@ -9,9 +9,12 @@ sleep 2
 
 hyprpaper &
 dunst &
-nm-applet &
+redshift -PO 4600 -b 0.8:0.8 &
 
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+/usr/lib/polkit-kde-authentification-agent-1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentification-agent-1 &
 
 waybar &
 
+dex -a -s ~/.config/hypr/autostart-desktops/ &

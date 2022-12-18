@@ -12,9 +12,10 @@
     ],
     "modules-center": ["hyprland/window"],
     "modules-right": [
+	"tray",
         "network",
         "custom/updates",
-        "battery",
+        // "battery",
         "pulseaudio",
         "pulseaudio#microphone"
     ],
@@ -51,9 +52,9 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " {essid}",
-        "format-ethernet": " {ipaddr}/{cidr}",
-        "format-disconnected": " ",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "  {ipaddr}/{cidr}",
+        "format-disconnected": "  ",
     },
     "battery": {
         "states": {
@@ -74,7 +75,7 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}  {volume}%",
         "tooltip": false,
         "format-muted": " Muted",
         "on-click": "pamixer -t",
