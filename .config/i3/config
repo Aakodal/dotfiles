@@ -11,7 +11,7 @@ font pango: Noto Sans Regular 10
 set $mod Mod4
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill "/home/aakodal/Documents/wallpaper.png"
+exec --no-startup-id feh --bg-fill "/home/aakodal/Documents/wallpapers/wallpaper.png"
 
 #####################
 # workspace layout: #

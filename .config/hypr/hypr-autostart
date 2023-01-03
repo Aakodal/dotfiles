@@ -1,0 +1,9 @@
+#!/bin/bash
+dex -a -s ~/.config/hypr/autostart-desktops/:~/.config/autostart/ &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+numlockx on &
+~/.screenlayout/monitor.sh &
+redshift -O 4600 &
+xset s 480 dpms 600 600 600 &
+dbus-launch dunst --config ~/.config/dunst/dunstrc &
+xgifwallpaper ~/Documents/wallpapers/wallpaper.gif &

@@ -62,8 +62,16 @@ run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
-			systemctl poweroff
+			if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
+				hyprctl dispatch -- exit && sleep 1 && systemctl poweroff
+			else
+				systemctl poweroff
+			fi
 		elif [[ $1 == '--reboot' ]]; then
+			if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
+				hyprctl dispatch -- exit
+				sleep 2
+			fi
 			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
 			mpc -q pause
@@ -72,12 +80,14 @@ run_cmd() {
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
 				hyprctl dispatch -- exit
+			elif [[ "$DESKTOP_SESSION" == 'hypr' ]]; then
+				pkill Hypr
 			else
 				qdbus org.kde.ksmserver /KSMServer logout 0 3 3 && i3-msg exit
 			fi
 		elif [[ $1 == '--lock' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
-				swaylock -e -i "$HOME/Documents/lockscreen.png"
+				swaylockd -e -i "$HOME/Documents/wallpapers/lockscreen.gif"
 			else
 				betterlockscreen -l blur
 			fi
