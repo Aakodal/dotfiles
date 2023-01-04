@@ -120,7 +120,7 @@
           :class "brightness-slider" 
           :value {brightness.level} 
           :marks true 
-          :onchange "light -S {}")))
+          :onchange "brightnessctl s {}%")))
 
     (box
       :class "system-info-box"
