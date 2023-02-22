@@ -6,10 +6,20 @@
  * Colors
  **/
 
+/* dark theme
 * {
     background:     #2E3440D6;
     background-alt: #383E4AD6;
     foreground:     #E5E9F0FF;
+    selected:       #BF616AFF;
+    active:         #A3BE8CFF;
+    urgent:         #DAA4AAFF;
+}*/
+
+* {
+    background:     #EFF1F6D6;
+    background-alt: #ECEFF4D6;
+    foreground:     #2E3440FF;
     selected:       #BF616AFF;
     active:         #A3BE8CFF;
     urgent:         #DAA4AAFF;

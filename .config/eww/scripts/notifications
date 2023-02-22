@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # fuck this
 
-XDG_CACHE_HOME="$HOME/.cache"
+XDG_CACHE_HOME=${XDG_CACHE_HOME:-"$HOME/.cache"}
 tmp=$XDG_CACHE_HOME/dunst-history.json
 
 declare ids

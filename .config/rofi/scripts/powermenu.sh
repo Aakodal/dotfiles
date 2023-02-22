@@ -87,7 +87,7 @@ run_cmd() {
 			fi
 		elif [[ $1 == '--lock' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
-				swaylockd -e -i "$HOME/Documents/wallpapers/lockscreen.gif"
+				swaylockd --screnshots --effect-blur 5x5
 			else
 				betterlockscreen -l blur
 			fi

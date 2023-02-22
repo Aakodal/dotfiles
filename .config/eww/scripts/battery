@@ -1,30 +1,30 @@
 #!/usr/bin/env bash
 
-icons=("" "" "" "" "" "" "" "")
+icons=("󱃍" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹")
 
 geticon() {
 	if [ "$STATE" = "Charging" ]; then
-    level=$(awk -v n="$CAPACITY" 'BEGIN{print int((n-1)/12)}')
+    level=$(awk -v n="$CAPACITY" 'BEGIN{print int(n/9)}')
 		echo "${icons[$level]}"
 	else
-    level=$(awk -v n="$CAPACITY" 'BEGIN{print int((n-1)/12)}')
+    level=$(awk -v n="$CAPACITY" 'BEGIN{print int(n/9)}')
 		echo "${icons[$level]}"
 	fi
 }
 
 status() {
 	if [ "$STATE" = "Charging" ]; then
-		echo -n "charging"
+		echo -n "en charge"
 
 		if [ "$RATE" -gt 0 ]; then
-			echo ", $(gettime) left"
+			echo ", $(gettime) restantes"
 		else
 			echo ""
 		fi
 	elif [ "$STATE" = "Discharging" ]; then
-		echo "$(gettime)h left"
+		echo "$(gettime) restantes"
 	else
-		echo "fully charged"
+		echo "chargé complètement"
 	fi
 }
 

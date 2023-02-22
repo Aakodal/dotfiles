@@ -16,7 +16,7 @@ dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 /usr/lib/polkit-kde-authentication-agent-1 &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-eww open bar &
+/home/aakodal/.local/bin/eww open bar &
 nm-applet &
 nmcli device connect wlan0 &
 

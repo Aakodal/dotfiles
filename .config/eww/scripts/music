@@ -50,6 +50,7 @@ get_position_time() {
 
 get_cover() {
 	# COVER_URL=$1
+	XDG_CACHE_HOME=${XDG_CACHE_HOME:-"$HOME/.cache"}
 	mkdir -p "$XDG_CACHE_HOME/eww_covers"
 	cd "$XDG_CACHE_HOME/eww_covers" || exit
 

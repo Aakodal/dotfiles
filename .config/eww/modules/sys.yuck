@@ -13,7 +13,7 @@
         (label :class "icon-text" :text "")))
 
     (circular-progress
-      :value {memory.percentage}
+      :value {memory.percentageCerc}
       :class "membar"
       :thickness 3
       (button

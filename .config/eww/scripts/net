@@ -12,7 +12,7 @@ else
     signal=$(LANG=en nmcli -f in-use,signal dev wifi | rg "\*" | awk '{ print $2 }')
     essid=$(LANG=en nmcli -t -f NAME connection show --active | head -n1 | sed 's/\"/\\"/g')
 
-    icons=("  " "b" "" "c" "d")
+    icons=("  " "" "" "" "")
 
     if [ "$status" = "disconnected" ] ; then
       icon="  "

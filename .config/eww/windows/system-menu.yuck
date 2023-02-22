@@ -159,7 +159,7 @@
         :space-evenly false
         :halign "end"
         (circular-progress
-          :value "${memory.percentage}"
+          :value "${memory.percentageCerc}"
           :class "sys-mem"
           :thickness 3
           (label
@@ -171,6 +171,10 @@
             :text "RAM"
             :halign "start"
             :class "sys-text-mem")
+          (label
+            :text "${memory.percentage}%"
+            :halign "start"
+            :class "sys-text-sub")
           (label
             :text "${memory.used} | ${memory.total}"
             :halign "start"
