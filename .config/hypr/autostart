@@ -8,7 +8,7 @@ sleep 2
 /usr/lib/xdg-desktop-portal &
 
 swww init &
-swww img /home/aakodal/Documents/wallpapers/wallpaper.gif
+swww img /home/aakodal/Documents/wallpapers/wallpaper2.png
 systemctl --user start dunst &
 redshift -PO 4600 -b 0.8:0.8 &
 
@@ -21,3 +21,5 @@ nm-applet &
 nmcli device connect wlan0 &
 
 dex -a -s ~/.config/hypr/autostart-desktops/ &
+protonvpn-cli c --cc FR &
+
