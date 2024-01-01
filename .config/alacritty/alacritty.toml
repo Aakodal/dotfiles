@@ -1,0 +1,48 @@
+[window]
+opacity = 0.85
+
+[window.dimensions]
+columns = 95
+lines = 25
+
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Regular"
+
+
+[colors.primary]
+background = "#EFF1F6"
+foreground = "#2E3440"
+
+[colors.cursor]
+text = "#D8DEE9"
+cursor = "#2E3440"
+
+[colors.normal]
+black = "#3B4252"
+red = "#BF616A"
+green = "#A3BE8C"
+yellow = "#DDA97D"
+blue = "#5E81AC"
+magenta = "#B48EAD"
+cyan = "#88C0D0"
+white = "#E5E9F0"
+
+[colors.bright]
+black = "#B5BCC9"
+red = "#DAA4AA"
+green = "#BED1AD"
+yellow = "#EBCB8B"
+blue = "#ABBDD4"
+magenta = "#CCB3C7"
+cyan = "#A4CFDB"
+white = "#ECEFF4"
+
+[cursor.style]
+shape = "Beam"
+blinking = "On"
+
+[shell]
+program = "/usr/bin/zsh"
+args = ["-is", "eval", "clear && macchina"]
